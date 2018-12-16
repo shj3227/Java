@@ -1,0 +1,33 @@
+@charset "UTF-8";
+/*
+1. 접두사
+	-webkit- : 구글, 사파리 브라우저에 적용
+	-moz- : 파이어폭스 브라우저에 적용
+	-ms- : 익스플로러에 적용, 보통 생략합니다.
+	-o- : 오페라 브라우저에 적용
+
+
+2. @media 쿼리
+@media only|not 매체유형 and (표현식) { CSS스타일코드; }
+
+3. 목록 태그
+ul (Unordered List) : 순서 없는 목록
+ol (Ordered List) : 순서 있는 목록
+li (List Item) : 목록 아이템
+dl (Definition List) : 용어 정의 목록
+dt (Definition Terms) : 용어
+dd (Definition Description) : 용어의 설명
+
+4. 속성 : id , class
+id 참고시 #
+class 참고시  .
+
+id : 유일한 값, 여러개를 적용시킬 수 없음
+class : 동일하게 여러개를 한 번에 적용가능
+
+5. 가운데정렬 어떤 방법이 좋을까..??
+(1)
+display: table;
+display: table-cell;
+*/
+

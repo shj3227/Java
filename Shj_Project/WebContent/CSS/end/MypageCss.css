@@ -1,0 +1,113 @@
+@charset "UTF-8";
+
+/* 나눔고딕 폰트 임포트 */
+@import url('https://fonts.googleapis.com/css?family=Nanum+Gothic');
+
+/* 기본적으로 margin: 0, padding: 0 으로 세팅 (필요시 추가) */
+html, body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, 
+code, form, fieldset, legend, input, textarea, p, blockquote, th, td, 
+img {
+	margin: 0;
+	padding: 0;
+}
+
+/* html 반응형위해 100% 잡아놓기 */
+html {
+	width: 100%;
+	height: 100%;
+}
+
+/* a태그 밑줄, 색상 교정 */
+a {
+	text-decoration: none;
+	color: #000;
+	display: inline-block;
+	
+}
+a:hover {
+	text-decoration: none;
+	color: #000;
+}
+a:active {
+	text-decoration: none;
+	color: #000;
+}
+a:visited {
+	text-decoration: none;
+	color: #000;
+}
+
+/* ----- 로그인 시작 ----- */
+
+/*전체 페이지 크기 & 가운데 정렬*/
+#wrap {
+	position: relative;
+	margin: 70px 190px 0;
+	/*margin: 70px 15% 0; (기존)*/
+}
+#container {
+	margin: 0 auto;
+	
+}
+#contents {
+	margin: 0 40px;
+}
+#contents-join {
+	margin: 0 100px;
+}
+
+.titleArea {
+	margin: 0 0 30px;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+
+.mypage {
+	text-align: center;
+	padding: 0 0 60px;
+	margin: 50px 0 50px;
+}
+
+
+
+
+/*모든 페이지 동일 제목 디자인*/
+.titleArea h2 {
+    display: inline-block;
+    color: #2e2e2e;
+    font-size: 15px;
+	margin: 0 0 0 10px;
+    letter-spacing: 2px;
+    font-weight: 500;
+    border-bottom: 1px solid #666;
+    padding: 0 15px 7px 17px;
+    margin: 0 0 30px;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.mybtn {
+	display: inline-block;
+	text-align: center;
+    width: 130px;
+    height: 30px;
+    padding: 40px 0;
+    border: 1px solid #000;
+	margin: 5px;    
+}
+
+h3 {
+    display: block;
+    font-size: 11px;
+    font-family: 'Nanum Gothic', sans-serif;
+    font-weight: normal;
+}
+
+strong {
+	font-size: 10px;
+    margin: 0 0 5px;
+    display: block;
+    text-transform: uppercase;
+    font-weight: normal;
+}

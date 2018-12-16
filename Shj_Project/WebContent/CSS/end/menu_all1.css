@@ -1,0 +1,1044 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css?family=Nanum+Gothic');
+
+/* 기본적으로 margin: 0, padding: 0 으로 세팅 (필요시 추가) */
+html, body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, 
+code, form, fieldset, legend, input, textarea, p, blockquote, th, td, 
+img {
+	margin: 0;
+	padding: 0;
+}
+
+/* html 반응형위해 100% 잡아놓기 */
+html {
+	width: 100%;
+	height: 100%;
+}
+
+/* li 태그 none */
+li {
+	list-style: none;
+}
+
+th, td {
+    border: 0;
+    vertical-align: top;
+}
+
+div {
+    display: block;
+}
+
+
+img, fieldset {
+    border: none;
+    vertical-align: top;
+}
+
+
+/* a태그 밑줄, 색상 교정 */
+a {
+	text-decoration: none;
+	color: #000;
+	font-family: 'Nanum Gothic', sans-serif;
+}
+a:hover {
+	text-decoration: none;
+	color: #000;
+}
+a:active {
+	text-decoration: none;
+	color: #000;
+}
+a:visited {
+	text-decoration: none;
+	color: #000;
+}
+
+/* 양 사이드 메뉴 반응형 media 쿼리 */
+@media only screen and (device-width:1000px) , only screen and
+		(max-width:1000px) , screen and (max-device-width:1000px) {
+	#sideleft {
+		position: absolute !important;
+		min-width: 190px;
+	}
+}
+
+@media only screen and (device-width:1000px) , only screen and
+		(max-width:1000px) , screen and (max-device-width:1000px) {
+	#sideright {
+		position: absolute !important;
+		min-width: 190px;
+	}
+}
+
+@media only screen and (device-width:1000px) , only screen and
+		(max-width:1000px) , screen and (max-device-width:1000px) {
+	#sidebgleft {
+		min-width: 190px;
+	}
+}
+
+@media only screen and (device-width:1000px) , only screen and
+		(max-width:1000px) , screen and (max-device-width:1000px) {
+	#sidebgright {
+		min-width: 190px;
+	}
+}
+
+/* 왼쪽 메뉴 background */
+#sidebgleft {
+	position: fixed;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 15%;
+	z-index: 20;
+	background: url("CSSimage/bg_img.jpg") repeat;
+}
+
+/* 오른쪽 메뉴 background */
+#sidebgright {
+	position: fixed;
+	right: 0;
+	top: 0;
+	height: 100%;
+	width: 15%;
+	z-index: 21;
+	background: url("CSSimage/bg_img.jpg") repeat;
+
+}
+
+/* 왼쪽 메뉴 */
+#sideleft {
+	position: fixed;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 15%;
+	z-index: 22;
+	font-family: 'Nanum Gothic', sans-serif;
+	font-size: 11px;
+	line-height: 22px;
+	text-transform: uppercase;
+	font-weight: 500;
+}
+
+/* 오른쪽 메뉴 */
+#sideright {
+	position: fixed;
+	right: 0;
+	top: 0;
+	height: 100%;
+	width: 15%;
+	z-index: 23;
+	font-family: 'Nanum Gothic', sans-serif;
+	font-size: 11px;
+	line-height: 22px;
+	text-transform: uppercase;
+	font-weight: 500;
+	text-align: right;
+}
+
+
+/* SOLD OUT 로고 레이아웃 */
+.layout-logotop {
+	margin: 50px 0 0 30px;
+	letter-spacing: 2px;
+}
+/* SOLD OUT 로고의 a태그 */
+.layout-logotop a {
+	font-size: 21px;
+	color: #000;
+	font-weight: 300;
+}
+/* sub-title(category, community) 글자조정 */
+.sub-title {
+	line-height: 2.5em; /* 행간 */
+	letter-spacing: 1.5px; /* 자간 */
+}
+
+/* category div 레이아웃*/
+#category {
+	margin: 50px 0 0 30px;	
+}
+
+/* Community div 레이아웃 */
+.layout-community {
+	margin: 50px 0 0 30px;	
+	letter-spacing: 2px;	
+}
+
+/* Community 서브메뉴들 */
+.sub-community {
+	line-height: 2.2em;	
+}
+
+/* SEARCH */
+.search-container {
+	margin: 50px 0 0 30px;
+}
+
+.search-container button {
+	background: #f1f1f1;
+	font-size: 12px;
+  	border: none;
+	cursor: pointer;
+}
+
+/* 사이드메뉴 서브메뉴 */
+.menu {
+	position: relative;
+	display: block;
+	font-weight: 500;
+	letter-spacing: 1.5px; /* 자간 */
+	line-height: 2.2em; /* 행간 */
+}
+.submenu {
+	position: absolute;
+	display: none;
+	background-color: #f1f1f1;
+	min-width: 150px;
+	z-index: 11;
+}
+.submenu a {
+	color: #000;
+    padding: 10px 14px;
+    text-decoration: none;
+    display: block;
+}
+.menu:hover .submenu{
+	display: block;
+}
+.submenu a:hover {
+	background-color: #ddd;
+}
+
+
+/* 오른쪽메뉴 레이아웃 */
+.layout-rightmenu {
+	margin: 50px 30px 0 0;
+}
+.layout-rightmenu a {
+	display: block;
+}
+
+.titleArea h2 {
+    display: inline-block;
+    color: #2e2e2e;
+    font-size: 15px;
+	margin: 0 0 0 10px;
+    letter-spacing: 2px;
+    font-weight: 500;
+    border-bottom: 1px solid #666;
+    padding: 0 15px 7px 17px;
+    font-family: Montserrat,Poppins,Lato,sans-serif;
+}
+
+/*id,pw 디자인*/
+.login {
+	padding: 30px 0;
+    font-size: 12px;
+}
+.login fieldset {
+	position: relative;
+    margin: 0 auto;
+    text-align: center;	
+}
+.login fieldset span{
+    display: block;
+    height: 19px;
+    font-size: 12px;
+    line-height: 19px;
+    color: #000;
+    font-family: Montserrat,Poppins,Lato,sans-serif;
+   
+}
+.login fieldset input{
+	display: inline;
+    width: 170px;
+    height: 18px;
+    padding: 2px;
+    color: #000;
+    margin: 0 0 5px 0;
+    border: 1px solid #dedede;
+}
+.login fieldset ul {
+    overflow: hidden;
+    padding: 20px 0 10px;
+}
+
+/*login버튼 css*/
+.log_button {
+    width: 174px;
+    display: block;
+    background: #000;
+    font-size: 12px;
+    border: 1px solid #000;
+    color: #fff;
+    text-align: center;
+    padding: 8px 0;
+    font-weight: normal;
+    margin: 10px 0 5px 0;
+    transition-duration: .4s;
+    -webkit-transition-duration: .4s;
+    -moz-transition-duration: .4s;
+    -o-transition-duration: .4s;
+    letter-spacing: 1px;
+    
+    /*가운데 정렬
+   margin: 0 auto;*/
+    
+}
+.log_button:hover {
+	color: #242526;
+	background-color:#f7f7f7;
+}
+.log_button:active {	
+	top:1px;
+}
+
+/* join member 버튼 */
+.login fieldset .join_btn a {
+    width: 174px;
+    display: block;
+    color: #000;
+    border: 1px solid #e9e9e9;
+    background: #e9e9e9;
+    text-align: center;
+    padding: 8px 0;
+    margin: 1px 0 5px 0;
+    font-size: 10px;
+    transition-duration: .4s;
+    -webkit-transition-duration: .4s;
+    -moz-transition-duration: .4s;
+    -o-transition-duration: .4s;
+}
+.login fieldset .join_btn a:hover {
+	background-color: #ffffff;
+	border: 1px solid #000;
+}
+
+/* ----- 로그인 끝 ----- */
+
+
+/* ----- Join 시작 ----- */
+
+
+/*테이블 페이지 크기*/
+.table{ 
+	max-width: 100%;
+    /*min-width: 600px; */
+    min-width: 100%; 
+    hight: 600px;
+	font-family: 'Nanum Gothic', sans-serif;
+}
+
+.join-frm {
+	display: inline-block;
+	vertical-align: top;
+	margin: 0 0;
+	align: center;
+}
+.join-frm table {
+	position: relative;
+    margin: 0 auto;
+}
+/*td(테이블 제목들)조절*/
+.joinc1{
+    font-size: 13px;
+    padding: 10px;
+    line-height: 19px;
+    color: #000;
+    font-family: 'Nanum Gothic', sans-serif;
+}
+
+/*주소 제외 input칸 조절*/
+.table input{
+	display: inline;
+    width: 40%;
+    height: 20px;
+    padding: 5px 7px 5px 7px;
+    border: 0 none;
+    color: #000;
+    margin: 0 0 5px;
+    border: 1px solid #dedede;
+}
+
+/* 핸드폰 주소 input 크기 조절 */
+.table input.joinc2{
+    width: 15%;
+}
+.table input.joinc3{ /*버튼*/
+    width: 100px; 
+    padding: 7px; 
+    height: 30px;
+    font-size:12px;
+    font-family: 'Nanum Gothic', sans-serif;
+}
+.table input.joinc4{
+    width: 100%;  
+}
+
+.table button.joinc5{
+	display: inline;
+    height: 30px;
+    padding: 7px;
+    border: 0 none;
+    color: #000;
+    margin: 5px 0;
+    border: 1px solid #dedede;
+    width: 90px;
+    font-size:12px;
+    font-family: 'Nanum Gothic', sans-serif;
+}
+
+.table input.joinc6 {
+	width: 30%;
+}
+
+/*placeholder 크기 폰트 조절*/
+input::-webkit-input-placeholder {
+	font-size: 12px; 
+	font-family: 'Nanum Gothic', sans-serif;
+}
+	
+input::-moz-placeholder { 
+	font-size: 12px; 
+	font-family: 'Nanum Gothic', sans-serif;
+}
+input:-ms-input-placeholder { 
+	font-size: 12px; 
+ 	font-family: 'Nanum Gothic', sans-serif;
+}
+input:-moz-placeholder { 
+	font-size: 12px; 
+	font-family: 'Nanum Gothic', sans-serif;
+	/*font-family: Montserrat,Poppins,Lato,sans-serif;*/
+}
+
+
+
+
+/*select 칸 디자인*/
+.table select{
+	display: inline;
+    height: 30px;
+    padding: 5px;
+    border: 1px solid #d5d5d5;
+    font-family: 'Nanum Gothic', sans-serif;
+    color: #353535;
+    margin: 10px 0 10px;
+    vertical-align: middle;
+    font-size: 11px;
+    
+    -webkit-appearance: menulist;
+    box-sizing: border-box;
+    align-items: center;
+    white-space: pre;
+    -webkit-rtl-ordering: logical;
+    background-color: white;
+}
+
+
+.log_button {
+	position: relative;
+	vertical-align: middle;
+	width: 174px;
+	display: block;
+	background: #000;
+	border: 1px solid #000;
+	color: #fff;
+	text-align: center;
+	padding: 8px 0;
+	font-weight: normal;
+	/*margin-left: 250px;
+    margin-top: 10px;*/
+    margin: 20px auto 0 auto;
+	transition-duration: .4s;
+	-webkit-transition-duration: .4s;
+	-moz-transition-duration: .4s;
+	-o-transition-duration: .4s;
+	letter-spacing: 1px;
+	/*float: left;*/
+
+	/*가운데 정렬
+   margin: 0 auto; */
+}
+
+.log_button:hover {
+	color: #242526;
+	background-color:#f7f7f7;
+}
+.log_button:active {	
+	top:1px;
+}
+
+
+/* ----- Join 끝 ----- */
+
+/* ----- 게시판 시작 ----- */
+.form-inline {
+	margin-bottom: 10px;
+}
+
+/*제목, 작성자 등등 입력하는 칸*/
+label{
+	width: 90px;
+	font-family: 'Nanum Gothic', sans-serif;
+}
+
+
+input#Wfc1{
+	width: 100%;
+	display: inline;
+    height: 20px;
+    padding: 7px;
+    border: 0 none;
+    color: #000;
+    margin: 5px auto;
+    border: 1px solid #dedede;
+    font-family: 'Nanum Gothic', sans-serif;
+}
+
+select{
+	display: inline;
+    height: 30px;
+    padding: 5px;
+    border: 1px solid #d5d5d5;
+    font-family: Lato,sans-serif,"돋움",Dotum;
+    color: #353535;
+    margin: 10px 0 10px 20px;
+    vertical-align: middle;
+    font-size: 11px;
+    border-radius: 0px;
+    -webkit-appearance: menulist;
+    box-sizing: border-box;
+    align-items: center;
+    white-space: pre;
+    -webkit-rtl-ordering: logical;
+    background-color: white;
+}
+
+
+/*완료 버튼*/
+.success{
+	display: inline;
+    height: 30px;
+    padding: 7px;
+    border: 0 none;
+    color: #000;
+    margin: 5px 0 5px;
+    border: 1px solid #dedede;
+    width: 90px;
+    font-family: 'Nanum Gothic', sans-serif;
+}
+
+/*글목록 버튼*/
+.primary{
+	display: inline;
+    height: 30px;
+    padding: 7px;
+    border: 0 none;
+    color: #000;
+    margin: 5px 0 5px;
+    border: 1px solid #dedede;
+    width: 90px;
+    font-family: 'Nanum Gothic', sans-serif;
+}
+
+/* ----- 게시판 끝 ----- */
+
+
+/* ----- 공지 시작 ----- */
+.path {
+    overflow: hidden;
+    height: 30px;
+    line-height: 30px;
+    *zoom: 1;
+    display: none;
+}
+
+.path li a {
+    color: #757575;
+}
+
+
+
+.xans-layout-category .position > ul > li > a {
+    display: block;
+    color: #333;
+}
+
+strong, b {
+    font-weight: bold;
+}
+
+
+li {
+	list-style: none;
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+
+hr.layout {
+    display: none;
+}
+
+hr {
+    display: block;
+    unicode-bidi: isolate;
+    margin-block-start: 0.5em;
+    margin-block-end: 0.5em;
+    margin-inline-start: auto;
+    margin-inline-end: auto;
+    overflow: hidden;
+    border-style: inset;
+    border-width: 1px;
+}
+
+h2 {
+    display: block;
+    font-size: 1.5em;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+
+.xans-board-listpackage .boardSort {
+    float: left;
+    margin: 0 0 10px;
+}
+
+.xans-board-listpackage {
+    margin: 0 0 10px;
+}
+
+.xans-board-title .title {
+    margin: 0 0 30px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.xans-board-title .title h2 {
+    display: inline-block;
+    color: #2e2e2e;
+    font-size: 13px;
+    margin: 0 0 10px;
+    letter-spacing: 2px;
+    font-weight: 500;
+    *display: inline;
+    *zoom: 1;
+    border-bottom: 1px solid #666;
+    padding: 0 15px 7px 17px;
+    font-family: Montserrat,Poppins,Lato,sans-serif;
+}
+
+#wrap {
+    position: relative;
+	margin: 70px 15% 0;
+/* 	margin: 70px 30% 0; */
+}
+
+
+#container {
+    margin: 0 auto;
+}
+
+#container:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+#contents {
+    margin: 0 40px;
+}
+
+colgroup {
+    display: table-column-group;
+}
+
+.ec-base-table.typeList table {
+    border-top-color: #dedede;
+}
+
+tbody {
+    display: table-row-group;
+    vertical-align: middle;
+    border-color: inherit;
+    
+}
+
+.ec-base-table.typeList.gBorder tbody td {
+    border-color: #eee;
+}
+
+.xans-board-listpackage .boardSort {
+    float: left;
+    margin: 0 0 0 37%;
+}
+
+.ec-base-table .center {
+    text-align: center;
+}
+
+.ec-base-table.typeList .center td, .ec-base-table.typeList td.center {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.ec-base-table.gBorder td:first-child {
+    border-left: 0;
+}
+
+.ec-base-table.typeList td {
+    padding: 8px 10px 7px;
+}
+
+.ec-base-table td {
+    padding: 11px 10px 10px;
+    border-top: 1px solid #dfdfdf;
+    color: #353535;
+    vertical-align: middle;
+}
+
+
+img.img-upload {
+   resize: both; /* 이미지 최대 사이즈에 적용 */
+   float: center; /* 가운데 정렬 */
+   max-width: 50px; /* 넓이를 지정 */
+   height: auto; /* 높이를 지정 */
+   margin: 5px 0; /* 여백을 적용 4가지 조건이 가능 위쪽, 오른쪽, 아래쪽, 왼쪽 순서 */
+}
+
+caption {
+    display: none;
+}
+
+tr {
+    display: table-row;
+    vertical-align: inherit;
+    border-color: inherit;
+}
+
+.ec-base-table th:first-child {
+    border-left: 0;
+}
+
+.xans-board-listpackage .ec-base-table {
+    clear: both;
+}
+
+.xans-board-listpackage .ec-base-table th {
+    font-size: 10px;
+}
+
+thead {
+    display: table-header-group;
+    vertical-align: middle;
+    border-color: inherit;
+    padding: 20px 0 20px;
+}
+
+.ec-base-table thead th {
+    padding: 11px 0 10px;
+    border-bottom: 1px solid #dedede;
+    vertical-align: middle;
+    font-weight: normal;
+    width: 50px;
+}
+
+
+
+.displaynone {
+    display: none !important;
+}
+
+th, td {
+    border: 0;
+    vertical-align: top;
+}
+
+.no_table {
+    width: 100%;
+    border: 0;
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+.ec-base-table table {
+    position: relative;
+    margin: 10px 0 0;
+    border: 1px solid #dedede;
+    border-top-color: #fff;
+    line-height: 1.5;
+    font-size: 11px;
+}
+
+table[Attributes Style] {
+    border-top-width: 1px;
+    border-right-width: 1px;
+    border-bottom-width: 1px;
+    border-left-width: 1px;
+}
+
+.no_table {
+    display: table;
+    border-collapse: separate;
+    border-spacing: 2px;
+    border-color: grey;
+}
+
+.ec-base-paginate {
+    margin: 30px 0;
+    text-align: center;
+    font-size: 0;
+    line-height: 0;
+}
+
+.ec-base-paginate ol {
+    display: inline-block;
+    font-size: 0;
+    line-height: 0;
+    vertical-align: top;
+    *display: inline;
+    *zoom: 1;
+    *margin: 0;
+    margin: 0 8px;
+}
+
+.ec-base-paginate li {
+    display: inline-block;
+    font-size: 10px;
+    margin: 0 3px;
+    color: #757575;
+    vertical-align: top;
+    *display: inline;
+    *zoom: 1;
+}
+
+.ec-base-paginate li:first-child {
+    margin-left: 0;
+}
+
+.ec-base-paginate a {
+    font-size: 12px;
+    padding: 6px;
+    line-height: 14px;
+    display: inline-block;
+    margin: 0 3px;
+    letter-spacing: -1px;
+}
+
+
+/*셀렉트 부분*/
+legend {
+    display: none;
+    padding-inline-start: 2px;
+    padding-inline-end: 2px;
+    border-width: initial;
+    border-style: none;
+    border-color: initial;
+    border-image: initial;
+}
+
+.xans-board-search select {
+    margin: 0 2px 0 0;
+    width: 72px;
+}
+
+select {
+    height: 27px;
+    border: 1px solid #d5d5d5;
+    border-radius: 0px;
+    vertical-align: sub;
+}
+
+
+select {
+    -webkit-appearance: menulist;
+    box-sizing: border-box;
+    align-items: center;
+    white-space: pre;
+    -webkit-rtl-ordering: logical;
+    color: black;
+    background-color: white;
+    cursor: default;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #d5d5d5;
+    border-image: initial;
+}
+
+option {
+    font-weight: normal;
+    display: block;
+    white-space: pre;
+    min-height: 1.2em;
+    padding: 0px 2px 1px;
+}
+
+
+/*버튼 List 부분*/
+.ec-base-button {
+    padding: 30px 0;
+    font-size: 10px;
+    text-transform: uppercase;
+}
+
+
+.ec-base-button .gLeft {
+    float: left;
+    text-align: left;
+}
+
+.ec-base-button a {
+    display: inline-block;
+    margin: 0 1px;
+    vertical-align: middle;
+    text-align: center;
+    transition-duration: .4s;
+    -webkit-transition-duration: .4s;
+    -moz-transition-duration: .4s;
+    -o-transition-duration: .4s;
+}
+
+a.btnWhite {
+    color: #000;
+    border: 1px solid #000;
+    background: #fff;
+    padding: 0 10px;
+    min-width: 120px;
+    height: 30px;
+    line-height: 30px;
+}
+
+a:hover.btnWhite {
+    color: #fff;
+    border: 1px solid #fff;
+    background: #000;
+}
+
+
+/*버튼 WRITE 부분*/
+.ec-base-button.typeBG {
+    padding: 10px 0;
+}
+
+.ec-base-button .gRight {
+    float: right;
+    text-align: right;
+}
+
+.xans-board-buttonlist.ec-base-button.typeBG {
+    border-top: 0 none;
+}
+
+.ec-base-button:after {
+    display: block;
+    content: "";
+    clear: both;
+}
+
+a.btnBlack {
+    color: #fff;
+    border: 1px solid #000;
+    background: #000;
+    padding: 0 10px;
+    min-width: 120px;
+    height: 30px;
+    line-height: 30px;
+}
+
+.ec-base-button a {
+    display: inline-block;
+    margin: 0 1px;
+    vertical-align: middle;
+    text-align: center;
+    transition-duration: .4s;
+    -webkit-transition-duration: .4s;
+    -moz-transition-duration: .4s;
+    -o-transition-duration: .4s;
+}
+
+a:hover.btnBlack {
+    color: #000;
+    border: 1px solid #000;
+    background: #fff;
+}
+
+
+
+/*검색 내용 부분*/
+input[type=text], input[type=password] {
+    height: 22px;
+    line-height: 20px;
+    padding: 2px 4px;
+    border: 1px solid #d5d5d5;
+    color: #353535;
+    font-size: 12px;
+}
+
+.xans-board-search input {
+    width: 162px;
+}
+
+/*버튼 serch 부분*/
+.xans-board-search a {
+    border: 1px solid #dedede;
+    text-transform: uppercase;
+    font-size: 10px;
+    padding: 5px 12px;
+    vertical-align: middle;
+}
+
+
+/* ----- 공지 끝 ----- */
+
+
+/**/
+/* 사이드메뉴 서브메뉴 */
+.menu {
+	position: relative;
+	display: block;
+}
+.submenu {
+	position: absolute;
+	display: none;
+	background-color: #f1f1f1;
+	min-width: 150px;
+	z-index: 2;
+}
+.submenu a {
+	color: black;
+    padding: 10px 14px;
+    text-decoration: none;
+    display: block;
+}
+.menu:hover .submenu{
+	display: block;
+}
+.submenu a:hover {
+	background-color: #ddd;
+}
+/*검색버튼*/
+.search-container {
+	margin: 50px 0 0 30px;
+}
+
+.search-container button {
+	background: #D8D8D8;
+	font-family: 'Nanum Gothic', sans-serif;
+	font-size: 12px;
+  	border: none;
+	cursor: pointer;
+}
+/*마진 수정*/
+div#position {
+	margin: 50px 0 0 30px;
+	
+}
